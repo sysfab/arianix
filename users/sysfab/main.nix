@@ -42,7 +42,7 @@ in
 
         wayland.windowManager.hyprland = {
             enable = true;
-            settings = import ./hyprland/main.nix { inherit settings; };
+            settings = import ./hyprland/main.nix {};
         };
 
         xdg.portal = {
