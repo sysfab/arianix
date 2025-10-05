@@ -1,22 +1,25 @@
 {
-  description = "My NixOS configuration";
+        description = "My NixOS configuration";
 
-  inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+        inputs = {
+                nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
 
-    home-manager = {
-      url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-  };
+                home-manager = {
+                        url = "github:nix-community/home-manager";
+                        inputs.nixpkgs.follows = "nixpkgs";
+                };
+        };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs: {
-    nixosConfigurations.aria = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
 
-        modules = [
-            ./hosts/aria/configuration.nix
-        ];
-    };
-  };
+        outputs = { self, nixpkgs, home-manager, ... }@inputs: {
+                nixosConfigurations.aria = nixpkgs.lib.nixosSystem {
+                                system = "x86_64-linux";
+
+                                modules = [
+                                                ./hosts/aria/configuration.nix
+                                                ./nvidia.nix
+                                                ./system-packages.nix
+                                ];
+                };
+        };
 }
