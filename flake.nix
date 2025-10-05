@@ -31,7 +31,7 @@
             ];
 
             specialArgs = {
-                inputs = inputs;
+                inherit inputs;
                 inherit nixpkgs;
             };
         };
