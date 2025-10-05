@@ -47,6 +47,7 @@ in
         services.swaync = {
             enable = true;
 
+            style.source = ./swaync/style.css;
             settings.source = ./swaync/config.json;
         };
 
