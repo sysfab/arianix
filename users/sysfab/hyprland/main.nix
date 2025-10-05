@@ -14,6 +14,6 @@
     ];
 
     input = [
-        "sensivity = -0.5";
+        "sensivity = -0.5"
     ];
 }
