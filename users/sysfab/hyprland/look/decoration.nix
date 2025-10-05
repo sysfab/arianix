@@ -22,7 +22,7 @@
 
             "vibrancy" = "0.1696";
         };
-    }
+    };
 
     windowrulev2 = [
         "opacity 0.8 0.8, class:^(kitty)$"
