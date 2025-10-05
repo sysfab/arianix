@@ -39,11 +39,11 @@ in
         programs.hyprland = {
             enable = true;
             package = inputs.hyprland.packages."$(pkgs.system)".hyprland;
-        }
+        };
 
         wayland.windowManager.hyprland = {
             enable = true;
-        }
+        };
 
         xdg.portal = {
             enable = true;
