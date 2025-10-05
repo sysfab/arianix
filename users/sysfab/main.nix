@@ -16,7 +16,6 @@ in
     };
 
     programs.hyprland.enable = true;
-    programs.hyprpolkit.enable = true;
 
     home-manager.users.sysfab = { pkgs, ... }: {
         nixpkgs.config.allowUnfree = true;
