@@ -50,13 +50,6 @@
 		"escape": true
 	},
 
-	"custom/power": {
-		"format": "",
-		"tooltip": "false",
-		"on-click": "exec bash ~/.config/fabarch/wlogout/launch.sh",
-		"interval": "once"
-	},
-    
 
 	"modules-left": [
 		"tray",
@@ -68,7 +61,6 @@
 	],
 
 	"modules-right": [
-		"custom/notification",
-		"custom/power"
+		"custom/notification"
 	]
 }
