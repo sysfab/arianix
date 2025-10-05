@@ -17,7 +17,7 @@ in
 
     programs.hyprland = {
         enable = true;
-        package = hyprland.packages."${pkgs.system}".hyprland;
+        package = hyprland.packages."${nixpkgs.system}".hyprland;
     };
 
     home-manager.users.sysfab = { pkgs, ... }: {
