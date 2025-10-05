@@ -40,6 +40,12 @@ in
         xdg.portal = {
             enable = true;
             extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
+
+            config = {
+                hyprland = {
+                    default = [ "hyprland" ]
+                }
+            };
         };
 
         programs.bash.enable = true;
