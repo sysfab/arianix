@@ -45,7 +45,7 @@ in
         };
 
         services.swaync = {
-            enabled = true;
+            enable = true;
 
             settings.source = ./swaync/config.json;
         };
