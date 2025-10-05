@@ -8,8 +8,9 @@
     };
 
     bind = [
-        "$mod, Q, exec, kitty"
-        "$mod, R, exec, pkill wofi || wofi --show drun"
+        "$mod, Q, exec, $terminal"
+        "$mod, R, exec, $menu"
+        "$mod, E, exec, $file-manager"
         "$mod, C, killactive"
     ];
 
