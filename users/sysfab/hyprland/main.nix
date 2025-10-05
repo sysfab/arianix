@@ -1,14 +1,19 @@
 {}:
 
 {
-     "$mod" = "SUPER";
-     bind = [
-          "$mod, Q, exec, kitty"
-          "$mod, R, exec, pkill wofi || wofi --show drun"
-          "$mod, C, killactive"
-     ];
+    "$mod" = "SUPER";
 
-     bindm = [          
-          "$mod, mouse:272, movewindow"
-     ];
+    bind = [
+        "$mod, Q, exec, kitty"
+        "$mod, R, exec, pkill wofi || wofi --show drun"
+        "$mod, C, killactive"
+    ];
+
+    bindm = [          
+        "$mod, mouse:272, movewindow"
+    ];
+
+    input = {
+        sensivity = -0.5;
+    };
 }
