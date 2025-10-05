@@ -18,10 +18,9 @@ in
     home-manager.users.sysfab = { pkgs, ... }: {
         nixpkgs.config.allowUnfree = true;
 
-        programs.hyprland.enable = true;
-        programs.waybar.enable = true;
-
         home.packages = with pkgs; [
+            hyprland
+            waybar
             xwayland
             wofi
             kitty
