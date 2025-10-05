@@ -7,6 +7,6 @@ in
 {
     "$mod" = "SUPER";
 
-    inherit (inputs) input bind bindm;
-    inherit (monitors) monitor;
+    inputs // 
+    monitors
 }
