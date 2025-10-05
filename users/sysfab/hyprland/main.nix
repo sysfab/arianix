@@ -8,10 +8,12 @@ let
     misc = import ./misc.nix {};
 
     animations = import ./look/animations.nix {};
+    decoration = import ./look/decoration.nix {};
 in
 env //
 programs //
 inputs // 
 monitors //
 misc //
-animations
+animations //
+decoration
