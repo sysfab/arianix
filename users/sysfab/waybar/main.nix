@@ -43,7 +43,7 @@
                     "none" = "<span></span>";
                     "dnd-notification" = "<span></span>";
                     "dnd-none" = "<span></span>";
-                },
+                };
                 "return-type" = "json";
                 "exec" = "swaync-client -swb";
                 "on-click" = "swaync-client -t -sw";
@@ -51,7 +51,7 @@
                 "escape" = true
             };
 
-            "custom/power": {
+            "custom/power" = {
                 "format" = "";
                 "tooltip" = "false";
                 "on-click" = "exec bash ~/.config/fabarch/wlogout/launch.sh";
