@@ -1,1 +1,2 @@
 alias rebuild='cd ~/arianix; git add .; git commit -m "update: rebuild"; sudo nixos-rebuild switch --flake ~/arianix/'
+alias logoff='hyprctl dispatch exit'
