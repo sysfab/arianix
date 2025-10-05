@@ -1,1 +1,1 @@
-alias rebuld='sudo nixos-rebuild switch --flake ~/arianix/'
+alias rebuild='cd ~/arianix; git add .; git commit -m "update: rebuild"; sudo nixos-rebuild switch --flake ~/arianix/'
