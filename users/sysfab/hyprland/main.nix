@@ -7,6 +7,6 @@ in
 {
     "$mod" = "SUPER";
 
-    inputs // 
-    monitors
+    inputs;
+    monitors;
 }
