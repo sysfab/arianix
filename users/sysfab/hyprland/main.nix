@@ -7,13 +7,15 @@ let
     monitors = import ./monitors.nix {};
     misc = import ./misc.nix {};
 
-    animations = import ./look/animations.nix {};
-    decoration = import ./look/decoration.nix {};
+    look_animations = import ./look/animations.nix {};
+    look_decoration = import ./look/decoration.nix {};
+    look_general = import ./look/general.nix {};
 in
 env //
 programs //
 inputs // 
 monitors //
 misc //
-animations //
-decoration
+look_animations //
+look_decoration //
+look_general
