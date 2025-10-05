@@ -13,7 +13,7 @@
         "$mod, mouse:272, movewindow"
     ];
 
-    input = [
-        "sensivity = -0.5"
-    ];
+    input = {
+        "sensivity" = "-0.5";
+    };
 }
