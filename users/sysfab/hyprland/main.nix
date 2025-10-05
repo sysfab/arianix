@@ -4,7 +4,7 @@
      "$mod" = "SUPER";
      bind = [
           "$mod, Q, exec, kitty"
-          "$mod, R, exec, wofi"
+          "$mod, R, exec, pkill wofi || wofi --drun"
           "$mod, C, killactive"
      ];
 }
