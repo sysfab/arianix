@@ -43,8 +43,8 @@ in
 
             config = {
                 hyprland = {
-                    default = [ "hyprland" ]
-                }
+                    default = [ "hyprland" ];
+                };
             };
         };
 
