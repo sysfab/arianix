@@ -3,7 +3,7 @@
 let
     bashrc = builtins.readFile ./.bashrc;
 
-    swaync_css = builtins.readFile ./swaync/style.css
+    swaync_css = builtins.readFile ./swaync/style.css;
 in
 {
     nixpkgs.config.allowUnfree = true;
