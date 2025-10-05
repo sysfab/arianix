@@ -20,6 +20,8 @@
 
                 ./hosts/aria/configuration.nix
                 ./nvidia.nix
+
+                ./environment.nix
                 
                 ./system-packages.nix
 
