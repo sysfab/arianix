@@ -1,7 +1,7 @@
 { config, nixpkgs, ... }:
 
 {
-    environment.systemPackages = with pkgs; [
+    environment.systemPackages = with nixpkgs; [
         wget
         curl
         git
@@ -31,9 +31,9 @@
         extraConfig = {
             pipewire."99-silent-bell.conf" = {
                 "context.properties" = {
-                    "module.x11.bell" = fa>
+                    "module.x11.bell" = false;
                 };
-            }
+            };
         };
     };
 }

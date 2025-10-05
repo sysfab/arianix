@@ -12,6 +12,8 @@
 
 
     outputs = { self, nixpkgs, home-manager, ... }@inputs: {
+        nixpkgs.config.allowUnfree = true;
+
         nixosConfigurations.aria = nixpkgs.lib.nixosSystem {
             system = "x86_64-linux";
 
