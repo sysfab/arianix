@@ -1,0 +1,1 @@
+alias rebuld='sudo nixos-rebuild switch --flake ~/arianix/'

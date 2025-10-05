@@ -1,17 +1,12 @@
-{ config, nixpkgs, ... }:
+{ config, pkgs, ... }:
 
 {
-    environment.systemPackages = with nixpkgs; [
+    nixpkgs.config.allowUnfree = true;
+
+    environment.systemPackages = with pkgs; [
         wget
         curl
         git
-
-        hyprland
-        waybar
-        wofi
-        pavucontrol
-        kitty
-        nautilus
     ];
 
     programs.bash.enable = true;
@@ -22,7 +17,6 @@
         enable = true;
 
         alsa.enable = true;
-        alsa.support32Bit = true;
 
         pulse.enable = true;
 

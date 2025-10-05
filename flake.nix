@@ -12,16 +12,21 @@
 
 
     outputs = { self, nixpkgs, home-manager, ... }@inputs: {
-        nixpkgs.config.allowUnfree = true;
-
         nixosConfigurations.aria = nixpkgs.lib.nixosSystem {
             system = "x86_64-linux";
 
             modules = [
+                home-manager.nixosModules.home-manager 
+
                 ./hosts/aria/configuration.nix
                 ./nvidia.nix
+                
                 ./system-packages.nix
+
+                ./users/sysfab/main.nix
             ];
+
+            specialArgs = { inherit nixpkgs; };
         };
     };
 }
