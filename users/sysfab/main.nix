@@ -15,6 +15,11 @@ in
         ];
     };
 
+    programs.hyprland = {
+        enable = true;
+        package = hyprland.packages."${pkgs.system}".hyprland;
+    };
+
     home-manager.users.sysfab = { pkgs, ... }: {
         nixpkgs.config.allowUnfree = true;
 
@@ -35,11 +40,6 @@ in
             vscode
             discord
         ];
-
-        programs.hyprland = {
-            enable = true;
-            package = hyprland.packages."${pkgs.system}".hyprland;
-        };
 
         wayland.windowManager.hyprland = {
             enable = true;
