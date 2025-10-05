@@ -2,6 +2,8 @@
 
 let
     bashrc = builtins.readFile ./.bashrc;
+
+    waybar_css = builtins.readFile ./waybar/style.css;
 in
 {
     nixpkgs.config.allowUnfree = true;
@@ -42,6 +44,8 @@ in
             enable = true;
             settings = import ./hyprland/main.nix {};
         };
+
+        home.file.".config/waybar/config".source = waybar_css;
 
         xdg.portal = {
             enable = true;
