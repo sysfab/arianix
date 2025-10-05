@@ -1,17 +1,12 @@
 {}:
 
+let
+    binds = import ./binds.nix { };
+in
 {
     "$mod" = "SUPER";
 
-    bind = [
-        "$mod, Q, exec, kitty"
-        "$mod, R, exec, pkill wofi || wofi --show drun"
-        "$mod, C, killactive"
-    ];
-
-    bindm = [          
-        "$mod, mouse:272, movewindow"
-    ];
+    inherit (binds) bind bindm;
 
     input = {
         "sensitivity" = "-0.5";
