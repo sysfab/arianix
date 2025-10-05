@@ -38,7 +38,7 @@ in
 
         programs.hyprland = {
             enable = true;
-            package = hyprland.packages.$(nixpkgs.system).hyprland;
+            package = hyprland.packages."${pkgs.system}".hyprland;
         };
 
         wayland.windowManager.hyprland = {
