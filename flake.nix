@@ -30,7 +30,10 @@
                 ./users/sysfab/main.nix
             ];
 
-            specialArgs = { inherit nixpkgs; };
+            specialArgs = {
+                inputs = inputs;
+                inherit nixpkgs;
+            };
         };
     };
 }
