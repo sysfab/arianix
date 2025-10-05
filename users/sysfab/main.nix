@@ -20,6 +20,7 @@ in
 
         home.packages = with pkgs; [
             hyprland
+            xwayland
             wofi
             kitty
             waybar
@@ -35,6 +36,11 @@ in
             vscode
             discord
         ];
+
+        xdg.portal = {
+            enable = true;
+            extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
+        };
 
         programs.bash.enable = true;
         programs.bash.bashrcExtra = bashrc;
