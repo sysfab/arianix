@@ -31,7 +31,7 @@
             ];
 
             specialArgs = {
-                inherit inputs;
+                inherit hyprland;
                 inherit nixpkgs;
             };
         };
