@@ -1,4 +1,4 @@
-{ config, nixpkgs, home-manager, ... }@inputs:
+{ config, nixpkgs, home-manager, hyprland, ... }:
 
 let
     bashrc = builtins.readFile ./.bashrc;
@@ -38,7 +38,7 @@ in
 
         programs.hyprland = {
             enable = true;
-            package = inputs.hyprland.packages."$(pkgs.system)".hyprland;
+            package = hyprland.packages."$(pkgs.system)".hyprland;
         };
 
         wayland.windowManager.hyprland = {
