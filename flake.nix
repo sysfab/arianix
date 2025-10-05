@@ -12,8 +12,10 @@
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs: {
     nixosConfigurations.aria = nixpkgs.lib.nixosSystem {
-        modules = [
+        system = "x86_64-linux";
 
+        modules = [
+            ./hosts/aria/configuration.nix
         ];
     };
   };
