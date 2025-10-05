@@ -17,7 +17,6 @@ in
 
     programs.hyprland = {
         enable = true;
-	config = import ./hyprland/main.nix { inherit config; };
     };
 
     home-manager.users.sysfab = { pkgs, ... }: {
@@ -43,6 +42,7 @@ in
 
         wayland.windowManager.hyprland = {
             enable = true;
+            settings = import ./hyprland/main.nix { inherit settings; };
         };
 
         xdg.portal = {
