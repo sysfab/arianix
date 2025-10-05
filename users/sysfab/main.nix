@@ -1,4 +1,4 @@
-{ config, nixpkgs, home-manager, ... }:
+{ config, nixpkgs, hyprland, home-manager, ... }:
 
 let
     bashrc = builtins.readFile ./.bashrc;
@@ -19,7 +19,6 @@ in
         nixpkgs.config.allowUnfree = true;
 
         home.packages = with pkgs; [
-            hyprland
             xwayland
             wofi
             kitty
@@ -36,6 +35,15 @@ in
             vscode
             discord
         ];
+
+        programs.hyprland = {
+            enable = true;
+            package = inputs.hyprland.packages."$(pkgs.system)".hyprland;
+        }
+
+        wayland.windowManager.hyprland = {
+            enable = true;
+        }
 
         xdg.portal = {
             enable = true;
