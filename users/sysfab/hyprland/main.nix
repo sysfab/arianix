@@ -5,4 +5,4 @@ let
     monitors = import ./monitors.nix {};
 in
 inputs // 
-monitos
+monitors
