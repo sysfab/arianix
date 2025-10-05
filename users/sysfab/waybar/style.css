@@ -1,0 +1,54 @@
+* {
+    font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 15px;
+}
+
+window#waybar {
+    background: rgba(0, 0, 0, 0.25);
+    border-radius:0px;
+    color: #ffffff;
+}
+
+button {
+    border: none;
+    border-radius: 0;
+}
+
+button:hover {
+    background: inherit;
+}
+
+#custom-power {
+    padding: 0 16px;
+    margin-right: 0px;
+    margin-left: 2px;
+}
+
+#custom-notification {
+    background-color: transparent;
+    padding: 0 5px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+#tray {
+    background-color: transparent;
+    padding: 0 10px;
+    margin: 0 4px;
+}
+
+#language {
+    background-color: rgba(0, 0, 0, 0);
+
+    text-shadow: 0px 0px 30px rgba(0, 0, 0, 1);
+
+    padding: 0 12px;
+    border-radius: 0px;
+}
+
+#clock {
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 15px;
+    padding-right: 15px;
+}

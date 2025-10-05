@@ -16,6 +16,7 @@ in
     };
 
     programs.hyprland.enable = true;
+    programs.waybar = import ./waybar/main.nix {};
 
     home-manager.users.sysfab = { pkgs, ... }: {
         nixpkgs.config.allowUnfree = true;
@@ -24,7 +25,6 @@ in
             xwayland
             wofi
             kitty
-            waybar
             nautilus
 
             noto-fonts
