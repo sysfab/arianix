@@ -14,6 +14,7 @@
     };
 
     networking.hostName = "aria";
+    time.timeZone = "Europe/Kyiv";
 
     system.stateVersion = "25.05";
 }
