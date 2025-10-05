@@ -13,7 +13,7 @@
     };
 
 
-    outputs = { self, nixpkgs, home-manager, ... }@inputs: {
+    outputs = { self, nixpkgs, home-manager, hyprland ... }@inputs: {
         nixosConfigurations.aria = nixpkgs.lib.nixosSystem {
             system = "x86_64-linux";
 
