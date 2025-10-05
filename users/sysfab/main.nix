@@ -2,6 +2,8 @@
 
 let
     bashrc = builtins.readFile ./.bashrc;
+
+    swaync_css = builtins.readFile ./swaync/style.css
 in
 {
     nixpkgs.config.allowUnfree = true;
@@ -47,7 +49,7 @@ in
         services.swaync = {
             enable = true;
 
-            style.source = ./swaync/style.css;
+            style = swaync_css;
             settings.source = ./swaync/config.json;
         };
 
