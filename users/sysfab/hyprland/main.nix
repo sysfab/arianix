@@ -5,5 +5,6 @@ let
     inputs = import ./inputs.nix {};
     monitors = import ./monitors.nix {};
 in
+programs //
 inputs // 
 monitors
