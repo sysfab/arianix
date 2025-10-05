@@ -1,6 +1,8 @@
 {}:
 
 {
+    "$mod" = "SUPER";
+
     input = {
         "sensitivity" = "-0.5";
     };
