@@ -45,7 +45,7 @@ in
             settings = import ./hyprland/main.nix {};
         };
 
-        home.file.".config/waybar/config".source = waybar_css;
+        home.file."${config.xdg.dataHome}/.config/waybar/config".source = waybar_css;
 
         xdg.portal = {
             enable = true;
