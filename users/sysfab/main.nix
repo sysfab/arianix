@@ -18,12 +18,6 @@ in
     programs.hyprland.enable = true;
     programs.waybar.enable = true;
 
-    services.swaync = {
-        enabled = true;
-
-        settings.source = ./swaync/config.json;
-    };
-
     home-manager.users.sysfab = { pkgs, ... }: {
         nixpkgs.config.allowUnfree = true;
 
@@ -48,6 +42,12 @@ in
         wayland.windowManager.hyprland = {
             enable = true;
             settings = import ./hyprland/main.nix {};
+        };
+
+        services.swaync = {
+            enabled = true;
+
+            settings.source = ./swaync/config.json;
         };
 
         home.file.".config/waybar/config".source = ./waybar/config;
