@@ -13,6 +13,7 @@
 
     services.libinput.enable = true;
 
+    service.rtkit.enable = true;
     services.pipewire = {
         enable = true;
 
