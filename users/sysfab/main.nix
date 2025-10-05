@@ -22,7 +22,7 @@ in
         enabled = true;
 
         settings.source = ./swaync/config.json;
-    }
+    };
 
     home-manager.users.sysfab = { pkgs, ... }: {
         nixpkgs.config.allowUnfree = true;
