@@ -29,7 +29,7 @@ in
             kitty
             nautilus
 
-            font-awesome
+            font-awesome-6
 
             noto-fonts
             noto-fonts-cjk-sans
