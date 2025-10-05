@@ -1,8 +1,10 @@
 {}:
 
 {
-    binds = {
-        "MOD+Q" = "kitty";
-        "MOD+C" = "hyprctl dispatch close_window";
-    };
+     "$mod" = "SUPER";
+     bind = [
+          "$mod, Q, exec, kitty"
+          "$mod, R, exec, wofi"
+          "$mod, C, killactive"
+     ];
 }
