@@ -5,7 +5,7 @@
 
     style = builtins.readFile ./style.css;
     
-    settings = [
+    config = [
         {
             "layer" = "top";
 
