@@ -1,4 +1,4 @@
-{ config, nixpkgs, inputs, home-manager, ... }:
+{ config, nixpkgs, home-manager, ... }@inputs:
 
 let
     bashrc = builtins.readFile ./.bashrc;
