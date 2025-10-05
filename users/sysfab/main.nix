@@ -15,12 +15,19 @@ in
         ];
     };
 
+    programs.hyprland.enable = true;
+    programs.waybar.enable = true;
+
+    services.swaync = {
+        enabled = true;
+
+        settings.source = ./swaync/config.json;
+    }
+
     home-manager.users.sysfab = { pkgs, ... }: {
         nixpkgs.config.allowUnfree = true;
 
         home.packages = with pkgs; [
-            hyprland
-            waybar
             xwayland
             wofi
             kitty
