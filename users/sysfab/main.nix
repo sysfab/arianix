@@ -19,6 +19,7 @@ in
     };
 
     xdg.icons.enable = true;
+    programs.steam.enable = true;
 
     home-manager.users.sysfab = { pkgs, ... }: {
         nixpkgs.config.allowUnfree = true;
@@ -58,7 +59,6 @@ in
             google-chrome
             vscode
             prismlauncher
-            steam
         ];
 
         programs.bash = {
