@@ -61,6 +61,8 @@ in
 
                         color = "23283d";
                     };
+
+                    pinDMs.enable = true;
                 };
             };
         };
