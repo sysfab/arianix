@@ -18,9 +18,7 @@ in
         ];
     };
 
-    programs.hyprland.enable = true;
     xdg.icons.enable = true;
-    programs.steam.enable = true;
 
     home-manager.users.sysfab = { pkgs, ... }: {
         nixpkgs.config.allowUnfree = true;
@@ -34,6 +32,7 @@ in
         };
 
         home.packages = with pkgs; [
+            hyprland
             xwayland
             kitty
             gvfs
@@ -59,6 +58,7 @@ in
             google-chrome
             vscode
             prismlauncher
+            steam
         ];
 
         programs.bash = {
