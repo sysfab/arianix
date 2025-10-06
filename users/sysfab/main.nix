@@ -18,6 +18,14 @@ in
         ];
     };
 
+    dconf.enable = true;
+
+    dconf.settings = {
+        "org/gnome/desktop/interface" = {
+            color-scheme = "prefer-dark";
+        };
+    };
+
     programs.hyprland.enable = true;
     xdg.icons.enable = true;
     programs.steam.enable = true;
@@ -54,11 +62,6 @@ in
             google-chrome
             vscode
         ];
-
-        home.sessionVariables = {
-            GIO_EXTRA_MODULES = "${pkgs.gvfs}/lib/gio/modules";
-            COLOR_SCHEME = "prefer-dark";
-        };
 
         programs.nixcord = {
             enable = true;
