@@ -18,17 +18,11 @@ button:hover {
     background: inherit;
 }
 
-#custom-power {
-    padding: 0 16px;
-    margin-right: 0px;
-    margin-left: 2px;
-}
-
 #custom-notification {
     background-color: transparent;
     padding: 0 5px;
     margin-left: 0px;
-    margin-right: 0px;
+    margin-right: 5px;
 }
 
 #tray {
