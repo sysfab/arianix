@@ -6,9 +6,9 @@ let
     wofi_css = builtins.readFile ./wofi/style.css;
     swaync_css = builtins.readFile ./swaync/style.css;
 
-    nautEnv = pkgs.buildEnv {
+    nautEnv = nixpkgs.buildEnv {
         name = "nautilus-env";
-        paths = with pkgs; [
+        paths = with nixpkgs; [
             gnome3.nautilus
             gnome3.nautilus-python
             gnome3.gvfs
