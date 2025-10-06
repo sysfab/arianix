@@ -43,6 +43,7 @@
 
     networking.hostName = "aria";
     networking.networkmanager.enable = true;
+    systemd.services.NetworkManager.serviceConfig.Type = "idle";
     networking.dhcpcd.enable = false;
     networking.firewall.enable = false;
 
