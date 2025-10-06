@@ -8,9 +8,7 @@
 
         kernelParams = [
             "quiet" 
-            "loglevel=3" 
-            "splash" 
-            "vga=current" 
+            "loglevel=3"
             "systemd.show_status=false" 
         ];
     
@@ -29,7 +27,7 @@
     fileSystems."/boot" = {
         device = "/dev/nvme0n1p1";
         fsType = "vfat";
-        options = [ "fastboot" ];
+        options = [];
     };
     
     fileSystems."/mnt/data" = {
