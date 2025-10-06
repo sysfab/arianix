@@ -8,14 +8,11 @@ let
 
     nautEnv = nixpkgs.buildEnv {
         name = "nautilus-env";
+
         paths = with nixpkgs; [
-            gnome3.nautilus
-            gnome3.nautilus-python
-            gnome3.gvfs
-            dconf
-            gsettings-desktop-schemas
-            gnome3.sushi
-            (python310.withPackages (p: with p; [ nautilus-open-any-terminal ]))
+            gnome.nautilus
+            gnome.nautilus-python
+            nautilus-open-any-terminal
         ];
     };
 in
