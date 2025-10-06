@@ -15,12 +15,16 @@
     };
 
 
-    outputs = inputs@{ self, nixpkgs, home-manager, nixcord, ... }: {
+    outputs = inputs@{ self, nixpkgs, home-manager, ... }: {
         nixosConfigurations.aria = nixpkgs.lib.nixosSystem {
             system = "x86_64-linux";
 
             modules = [
-                home-manager.nixosModules.home-manager
+                home-manager.nixosModules.home-manager {
+                    home-manager.sharedModules = [
+                        inputs.nixcord.homeModules.nixcord
+                    ];
+                }
 
                 ./hosts/aria/configuration.nix
                 ./nvidia.nix
@@ -34,7 +38,6 @@
 
             specialArgs = {
                 inherit nixpkgs;
-                inherit nixcord;
             };
         };
     };

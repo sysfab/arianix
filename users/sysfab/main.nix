@@ -1,4 +1,4 @@
-{ config, nixpkgs, home-manager, nixcord, ... }:
+{ config, nixpkgs, home-manager, ... }:
 
 let
     bashrc = builtins.readFile ./.bashrc;
@@ -7,10 +7,6 @@ let
     swaync_css = builtins.readFile ./swaync/style.css;
 in
 {
-    imports = [
-        nixcord.homeModules.nixcord
-    ];
-
     nixpkgs.config.allowUnfree = true;
 
     users.users.sysfab = {
