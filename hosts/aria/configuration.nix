@@ -12,6 +12,12 @@
         device = "/dev/nvme0n1p1";
         fsType = "vfat";
     };
+    
+    fileSystems."/mnt/data" = {
+        device = "/dev/sda";
+        fsType = "ext4";
+        options = [ "defaults" ];
+    };
 
     networking.hostName = "aria";
     time.timeZone = "Europe/Kyiv";
