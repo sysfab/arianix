@@ -9,7 +9,9 @@
         kernelParams = [ "quiet" "loglevel=3" "systemd.show_status=false" ];
     };
 
-    services.getty.helpLine = "\[\e[38;5;39;1m\]Welcome to Aria!\[\e[0m\]";
+    environment.etc."issue".text = "";
+    services.getty.helpLine = "Welcome to Aria!";
+    environment.etc."motd".text = "";
     
     fileSystems."/" = {
         device = "/dev/nvme0n1p2";
