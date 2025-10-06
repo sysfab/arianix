@@ -63,12 +63,12 @@ in
                 splash = false;
 
                 preload = [
-                    "./hyprpaper/wallpaper.jpg"
+                    "${./hyprpaper/wallpaper.jpg}"
                 ];
 
                 wallpaper = [
-                    "HDMI-A-1, ./hyprpaper/wallpaper.jpg"
-                    "DVI-D-1, ./hyprpaper/wallpaper.jpg"
+                    "HDMI-A-1, ${./hyprpaper/wallpaper.jpg}"
+                    "DVI-D-1, ${./hyprpaper/wallpaper.jpg}"
                 ];
             };
         };
