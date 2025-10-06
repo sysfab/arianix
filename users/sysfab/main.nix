@@ -55,6 +55,22 @@ in
             settings.source = ./swaync/config.json;
         };
 
+        services.hyprpaper = {
+            enable = true;
+
+            ipc = true;
+            settings = {
+                preload = [
+                    "./hyprpaper/wallpaper.jpg"
+                ];
+
+                wallpaper = [
+                    "HDMI-A-1, ./hyprpaper/wallpaper.jpg"
+                    "DVI-D-1, ./hyprpaper/wallpaper.jpg"
+                ]
+            };
+        }
+
         home.file.".config/waybar/config".source = ./waybar/config;
         home.file.".config/waybar/style.css".source = ./waybar/style.css;
 
