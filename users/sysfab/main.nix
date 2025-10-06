@@ -138,8 +138,10 @@ in
             };
         };
 
-        programs.bash.enable = true;
-        programs.bash.bashrcExtra = bashrc;
+        programs.bash = {
+            enable = true;
+            bashrcExtra = bashrc;
+        }
 
         home.stateVersion = "25.05";
     };
