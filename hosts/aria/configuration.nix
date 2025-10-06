@@ -9,8 +9,8 @@
         kernelParams = [ "quiet" "loglevel=3" "systemd.show_status=false" ];
     };
 
-    environment.etc."issue".text = "";
-    services.getty.helpLine = "Welcome to Aria!";
+    environment.etc."issue".text = "Welcome to Aria!";
+    services.getty.helpLine = "";
     environment.etc."motd".text = "";
     
     fileSystems."/" = {
