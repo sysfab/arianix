@@ -2,6 +2,7 @@
 
 let
     bashrc = builtins.readFile ./.bashrc;
+    bash_profile = builtins.readFile ./.bash_profile
 
     wofi_css = builtins.readFile ./desktop/wofi/style.css;
     swaync_css = builtins.readFile ./desktop/swaync/style.css;
@@ -64,6 +65,7 @@ in
         programs.bash = {
             enable = true;
             bashrcExtra = bashrc;
+            initExtra = bash_profile;
         };
 
         programs.nixcord = import ./apps/discord.nix {};
