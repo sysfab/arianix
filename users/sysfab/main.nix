@@ -7,6 +7,10 @@ let
     swaync_css = builtins.readFile ./swaync/style.css;
 in
 {
+    imports = [
+        inputs.nixcord.homeModules.nixcord
+    ]
+
     nixpkgs.config.allowUnfree = true;
 
     users.users.sysfab = {

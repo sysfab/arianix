@@ -8,15 +8,19 @@
                     url = "github:nix-community/home-manager";
                     inputs.nixpkgs.follows = "nixpkgs";
             };
+
+            inputs.nixcord = {
+                url = "github:kaylorben/nixcord";
+            };
     };
 
 
-    outputs = { self, nixpkgs, home-manager, ... }@inputs: {
+    outputs = inputs@{ nixpkgs, home-manager, ... }: {
         nixosConfigurations.aria = nixpkgs.lib.nixosSystem {
             system = "x86_64-linux";
 
             modules = [
-                home-manager.nixosModules.home-manager 
+                home-manager.nixosModules.home-manager
 
                 ./hosts/aria/configuration.nix
                 ./nvidia.nix
