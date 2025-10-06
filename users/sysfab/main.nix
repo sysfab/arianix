@@ -8,7 +8,7 @@ let
 in
 {
     imports = [
-        inputs.nixcord.homeModules.nixcord
+        nixcord.homeModules.nixcord
     ];
 
     nixpkgs.config.allowUnfree = true;
