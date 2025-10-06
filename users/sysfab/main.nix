@@ -18,10 +18,6 @@ in
     };
 
     programs.hyprland.enable = true;
-    programs.waybar = {
-        enable = true;
-        systemd.enable = false;
-    };
 
     home-manager.users.sysfab = { pkgs, ... }: {
         nixpkgs.config.allowUnfree = true;
@@ -45,6 +41,11 @@ in
         ];
         
         fonts.fontconfig.enable = true;
+
+        programs.waybar = {
+            enable = true;
+            systemd.enable = false;
+        };
 
         wayland.windowManager.hyprland = {
             enable = true;
