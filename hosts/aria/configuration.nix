@@ -44,6 +44,9 @@
     };
 
     networking.hostName = "aria";
+    networking.networkmanager.enable = true;
+    networking.dhcpcd.enable = false;
+
     time.timeZone = "Europe/Kyiv";
 
     system.stateVersion = "25.05";
