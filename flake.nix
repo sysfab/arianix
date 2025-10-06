@@ -9,7 +9,7 @@
                     inputs.nixpkgs.follows = "nixpkgs";
             };
 
-            inputs.nixcord = {
+            nixcord = {
                 url = "github:kaylorben/nixcord";
             };
     };
