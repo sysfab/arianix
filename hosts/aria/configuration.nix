@@ -9,6 +9,8 @@
         kernelParams = [ "quiet" "loglevel=3" "systemd.show_status=false" ];
     };
 
+    services.getty.helpLine = "\[\e[38;5;39;1m\]Welcome to Aria!\[\e[0m\]";
+    
     fileSystems."/" = {
         device = "/dev/nvme0n1p2";
         fsType = "ext4";
