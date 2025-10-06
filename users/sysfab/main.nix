@@ -59,7 +59,7 @@ in
                     clientTheme = {
                         enable = true;
 
-                        themeColor = "#23283d";
+                        color = "23283d";
                     };
                 };
             };
