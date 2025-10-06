@@ -3,8 +3,8 @@
 let
     bashrc = builtins.readFile ./.bashrc;
 
-    wofi_css = builtins.readFile ./wofi/style.css;
-    swaync_css = builtins.readFile ./swaync/style.css;
+    wofi_css = builtins.readFile ./desktop/wofi/style.css;
+    swaync_css = builtins.readFile ./desktop/swaync/style.css;
 in
 {
     nixpkgs.config.allowUnfree = true;
@@ -61,33 +61,7 @@ in
             prismlauncher
         ];
 
-        programs.nixcord = {
-            enable = true;
-
-            config = {
-                plugins = {
-                    fakeNitro.enable = true;
-
-                    platformIndicators.enable = true;
-
-                    plainFolderIcon.enable = true;
-
-                    disableCallIdle.enable = true;
-
-                    callTimer.enable = true;
-
-                    messageLogger.enable = true;
-
-                    clientTheme = {
-                        enable = true;
-
-                        color = "23283d";
-                    };
-
-                    pinDMs.enable = true;
-                };
-            };
-        };
+        programs.nixcord = import ./apps/discord.nix {};
         
         fonts.fontconfig.enable = true;
 
@@ -110,14 +84,14 @@ in
 
         wayland.windowManager.hyprland = {
             enable = true;
-            settings = import ./hyprland/main.nix {};
+            settings = import ./desktop/hyprland/main.nix {};
         };
 
         services.swaync = {
             enable = true;
 
             style = swaync_css;
-            settings.source = ./swaync/config.json;
+            settings.source = ./desktop/swaync/config.json;
         };
 
         services.hyprpaper = {
@@ -128,18 +102,18 @@ in
                 splash = false;
 
                 preload = [
-                    "${./hyprpaper/wallpaper.jpg}"
+                    "${./desktop/hyprpaper/wallpaper.jpg}"
                 ];
 
                 wallpaper = [
-                    "HDMI-A-1, ${./hyprpaper/wallpaper.jpg}"
-                    "DVI-D-1, ${./hyprpaper/wallpaper.jpg}"
+                    "HDMI-A-1, ${./desktop/hyprpaper/wallpaper.jpg}"
+                    "DVI-D-1, ${./desktop/hyprpaper/wallpaper.jpg}"
                 ];
             };
         };
 
-        home.file.".config/waybar/config".source = ./waybar/config;
-        home.file.".config/waybar/style.css".source = ./waybar/style.css;
+        home.file.".config/waybar/config".source = ./desktop/waybar/config;
+        home.file.".config/waybar/style.css".source = ./desktop/waybar/style.css;
 
         xdg = {
             mimeApps = {
