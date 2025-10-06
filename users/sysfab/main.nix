@@ -37,8 +37,11 @@ in
 
             google-chrome
             vscode
-            discord
         ];
+
+        programs.nixcord = {
+            enable = true;
+        }
         
         fonts.fontconfig.enable = true;
 
