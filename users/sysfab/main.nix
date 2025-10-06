@@ -27,6 +27,7 @@ in
             xwayland
             kitty
             nautilus
+            hyprshot
 
             font-awesome
 
