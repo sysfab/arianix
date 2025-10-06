@@ -23,6 +23,14 @@ in
     home-manager.users.sysfab = { pkgs, ... }: {
         nixpkgs.config.allowUnfree = true;
 
+        xdg.mimeApps = {
+            enable = true;
+            defaultApplications = {
+                "inode/directory" = [ "org.gnome.Nautilus.desktop" ];
+                "application/pdf" = [ "zathura.desktop" ];
+            };
+        };
+
         home.packages = with pkgs; [
             xwayland
             kitty
