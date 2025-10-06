@@ -9,7 +9,7 @@ in
 {
     imports = [
         inputs.nixcord.homeModules.nixcord
-    ]
+    ];
 
     nixpkgs.config.allowUnfree = true;
 
