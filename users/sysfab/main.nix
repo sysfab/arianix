@@ -40,6 +40,8 @@ in
             vscode
             discord
         ];
+        
+        fonts.fontconfig.enable = true;
 
         wayland.windowManager.hyprland = {
             enable = true;
