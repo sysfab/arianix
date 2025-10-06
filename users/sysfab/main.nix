@@ -19,6 +19,7 @@ in
     };
 
     programs.hyprland.enable = true;
+    xdg.icons.enable = true;
 
     home-manager.users.sysfab = { pkgs, ... }: {
         nixpkgs.config.allowUnfree = true;
@@ -125,8 +126,6 @@ in
         home.file.".config/waybar/style.css".source = ./waybar/style.css;
 
         xdg = {
-            icons.enable = true;
-
             mimeApps = {
                 enable = true;
                 defaultApplications = {
