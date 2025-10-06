@@ -57,25 +57,6 @@ in
             vscode
         ];
 
-        dconf.enable = true;
-
-        dconf.settings = {
-            "org/gnome/desktop/interface" = {
-                color-scheme = "prefer-dark";
-            };
-        };
-
-        gtk.enable = true;
-        gtk.theme.name = "adw-gtk3-dark";
-
-        gtk.gtk3.extraConfig = {
-            "gtk-application-prefer-dark-theme" = 1;
-        };
-
-        gtk.gtk4.extraConfig = {
-            "gtk-application-prefer-dark-theme" = 1;
-        };
-
         programs.nixcord = {
             enable = true;
 
