@@ -9,7 +9,7 @@
         kernelParams = [ "quiet" "loglevel=3" "systemd.show_status=false" ];
     };
 
-    environment.etc."issue".text = "Welcome to Aria!";
+    environment.etc."issue".text = "\[\e[38;5;39;1m\]Welcome to Aria!\[\e[0m\]\n\n";
     services.getty.helpLine = "";
     environment.etc."motd".text = "";
     
