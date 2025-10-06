@@ -41,6 +41,7 @@ in
             hyprshot
 
             cmatrix
+            fastfetch
 
             adw-gtk3
 
