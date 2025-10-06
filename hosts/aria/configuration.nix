@@ -29,6 +29,7 @@
     fileSystems."/boot" = {
         device = "/dev/nvme0n1p1";
         fsType = "vfat";
+        options = [ "fastboot" ];
     };
     
     fileSystems."/mnt/data" = {
@@ -46,6 +47,10 @@
     networking.hostName = "aria";
     networking.networkmanager.enable = true;
     networking.dhcpcd.enable = false;
+    networking.firewall.enable = false;
+
+    services.logrotate.enable = false;
+
 
     time.timeZone = "Europe/Kyiv";
 
