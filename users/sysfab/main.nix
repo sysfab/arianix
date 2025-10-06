@@ -45,6 +45,14 @@ in
             config = {
                 plugins = {
                     fakeNitro.enable = true;
+
+                    platformIndicators.enable = true;
+
+                    plainFolderIcon.enable = true;
+
+                    disableCallIdle.enable = true;
+
+                    callTimer.enable = true;
                 };
             };
         };
