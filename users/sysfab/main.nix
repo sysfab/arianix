@@ -58,6 +58,7 @@ in
 
             google-chrome
             vscode
+            prism-launcher
         ];
 
         programs.nixcord = {
