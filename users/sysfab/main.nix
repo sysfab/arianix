@@ -24,6 +24,14 @@ in
     home-manager.users.sysfab = { pkgs, ... }: {
         nixpkgs.config.allowUnfree = true;
 
+        home.pointerCursor = {
+            enable = true;
+            package = pkgs.vimix-cursors;
+            name = "Vimix-cursors";
+            size = 24;
+            gtk.enable = true;
+        };
+
         home.packages = with pkgs; [
             xwayland
             kitty
@@ -33,8 +41,6 @@ in
             adwaita-icon-theme
             papirus-icon-theme
             gnome-themes-extra
-
-            vimix-cursors
 
             font-awesome
 
