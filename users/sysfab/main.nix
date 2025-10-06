@@ -20,6 +20,7 @@ in
 
     programs.hyprland.enable = true;
     xdg.icons.enable = true;
+    programs.steam.enable = true;
 
     home-manager.users.sysfab = { pkgs, ... }: {
         nixpkgs.config.allowUnfree = true;
