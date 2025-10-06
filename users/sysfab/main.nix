@@ -61,6 +61,11 @@ in
             prismlauncher
         ];
 
+        programs.bash = {
+            enable = true;
+            bashrcExtra = bashrc;
+        };
+
         programs.nixcord = import ./apps/discord.nix {};
         
         fonts.fontconfig.enable = true;
@@ -137,11 +142,6 @@ in
                 };
             };
         };
-
-        programs.bash = {
-            enable = true;
-            bashrcExtra = bashrc;
-        }
 
         home.stateVersion = "25.05";
     };
