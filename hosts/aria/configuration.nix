@@ -14,7 +14,7 @@
     };
     
     fileSystems."/mnt/data" = {
-        device = "/dev/sda";
+        device = "/dev/disk/by-uuid/d6524d20-622b-417a-97c0-16a9cf867c75";
         fsType = "ext4";
         options = [ "defaults" ];
     };
