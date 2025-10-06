@@ -41,7 +41,7 @@ in
 
         programs.nixcord = {
             enable = true;
-        }
+        };
         
         fonts.fontconfig.enable = true;
 
