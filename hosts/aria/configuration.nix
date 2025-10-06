@@ -27,7 +27,6 @@
     fileSystems."/boot" = {
         device = "/dev/nvme0n1p1";
         fsType = "vfat";
-        options = [];
     };
     
     fileSystems."/mnt/data" = {
