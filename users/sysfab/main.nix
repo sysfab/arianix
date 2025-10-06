@@ -58,8 +58,10 @@ in
         services.hyprpaper = {
             enable = true;
 
-            ipc = true;
             settings = {
+                ipc = "on";
+                splash = false;
+
                 preload = [
                     "./hyprpaper/wallpaper.jpg"
                 ];
