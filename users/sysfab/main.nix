@@ -34,6 +34,8 @@ in
             papirus-icon-theme
             gnome-themes-extra
 
+            vimix-cursors
+
             font-awesome
 
             noto-fonts
