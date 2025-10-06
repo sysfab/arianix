@@ -54,13 +54,6 @@ in
             vscode
         ];
 
-        programs.gnome.gsettings = {
-            "org.gnome.desktop.interface" = {
-                "color-scheme" = "prefer-dark";
-                "gtk-theme"   = "adw-gtk3";
-            };
-        };
-
         programs.nixcord = {
             enable = true;
 
