@@ -44,7 +44,7 @@ in
 
             config = {
                 plugins = {
-                    fakeNitro.enable = true
+                    fakeNitro.enable = true;
                 };
             };
         };
