@@ -6,10 +6,18 @@
             systemd-boot.enable = true;
         };
 
-        kernelParams = [ "quiet" "loglevel=3" "systemd.show_status=false" ];
+        kernelParams = [
+            "quiet" 
+            "loglevel=3" 
+            "splash" 
+            "vga=current" 
+            "systemd.show_status=false" 
+        ];
+    
+        initrd.verbose = false;
     };
 
-    environment.etc."issue".text = "\[\e[38;5;39;1m\]Welcome to Aria!\[\e[0m\]\n\n";
+    environment.etc."issue".text = "Welcome to Aria!";
     services.getty.helpLine = "";
     environment.etc."motd".text = "";
     
