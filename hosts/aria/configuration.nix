@@ -19,6 +19,12 @@
         options = [ "defaults" ];
     };
 
+    fileSystems."/mnt/windows" = {
+        device = "/dev/disk/by-uuid/D8E60AFDE60ADC1E";
+        fsType = "ntfs";
+        options = [ "rw" "uid=1000" "gid=100" "umask=0022" ];
+    };
+
     networking.hostName = "aria";
     time.timeZone = "Europe/Kyiv";
 
