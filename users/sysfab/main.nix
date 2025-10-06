@@ -41,6 +41,12 @@ in
 
         programs.nixcord = {
             enable = true;
+
+            config = {
+                plugins = {
+                    fakeNitro.enable = true
+                };
+            };
         };
         
         fonts.fontconfig.enable = true;
