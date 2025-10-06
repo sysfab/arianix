@@ -51,7 +51,7 @@ in
             enable = true;
 
             style = wofi_css;
-            config = {
+            settings = {
                 mode = "drun";
                 insensitive = true;
                 prompt = "Search";
