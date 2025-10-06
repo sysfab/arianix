@@ -23,18 +23,15 @@ in
     home-manager.users.sysfab = { pkgs, ... }: {
         nixpkgs.config.allowUnfree = true;
 
-        xdg.mimeApps = {
-            enable = true;
-            defaultApplications = {
-                "inode/directory" = [ "org.gnome.Nautilus.desktop" ];
-            };
-        };
-
         home.packages = with pkgs; [
             xwayland
             kitty
             nautilus
             hyprshot
+
+            adwaita-icon-theme
+            papirus-icon-theme
+            gnome-themes-extra
 
             font-awesome
 
@@ -127,13 +124,24 @@ in
         home.file.".config/waybar/config".source = ./waybar/config;
         home.file.".config/waybar/style.css".source = ./waybar/style.css;
 
-        xdg.portal = {
-            enable = true;
-            extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
+        xdg = {
+            icons.enable = true;
 
-            config = {
-                hyprland = {
-                    default = [ "hyprland" ];
+            mimeApps = {
+                enable = true;
+                defaultApplications = {
+                    "inode/directory" = [ "org.gnome.Nautilus.desktop" ];
+                };
+            };
+
+            portal = {
+                enable = true;
+                extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
+
+                config = {
+                    hyprland = {
+                        default = [ "hyprland" ];
+                    };
                 };
             };
         };
