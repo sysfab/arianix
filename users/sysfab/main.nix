@@ -5,6 +5,19 @@ let
 
     wofi_css = builtins.readFile ./wofi/style.css;
     swaync_css = builtins.readFile ./swaync/style.css;
+
+    nautEnv = pkgs.buildEnv {
+        name = "nautilus-env";
+        paths = with pkgs; [
+            gnome3.nautilus
+            gnome3.nautilus-python
+            gnome3.gvfs
+            dconf
+            gsettings-desktop-schemas
+            gnome3.sushi
+            (python310.withPackages (p: with p; [ nautilus-open-any-terminal ]))
+        ];
+    };
 in
 {
     nixpkgs.config.allowUnfree = true;
@@ -36,7 +49,7 @@ in
         home.packages = with pkgs; [
             xwayland
             kitty
-            nautilus
+            nautEnv
             hyprshot
 
             adwaita-icon-theme
@@ -53,6 +66,11 @@ in
             google-chrome
             vscode
         ];
+
+        home.sessionVariables = {
+            GIO_EXTRA_MODULES = "${nautEnv}/lib/gio/modules";
+            NAUTILUS_4_EXTENSION_DIR = "${nautEnv}"; # https://github.com/NixOS/nixpkgs/blob/98da3dd0de6660d4abed7bb74e748694bd803413/pkgs/desktops/gnome/core/nautilus/extension_dir.patch#L18
+        };
 
         programs.nixcord = {
             enable = true;
