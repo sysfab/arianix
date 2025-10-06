@@ -25,11 +25,6 @@ in
     home-manager.users.sysfab = { pkgs, ... }: {
         nixpkgs.config.allowUnfree = true;
 
-        gtk = {
-            enable = true;
-            colorScheme = "dark";
-        };
-
         home.pointerCursor = {
             enable = true;
             package = pkgs.vimix-cursors;
@@ -58,6 +53,13 @@ in
             google-chrome
             vscode
         ];
+
+        programs.gnome.gsettings = {
+            "org.gnome.desktop.interface" = {
+                "color-scheme" = "prefer-dark";
+                "gtk-theme"   = "adw-gtk3";
+            };
+        };
 
         programs.nixcord = {
             enable = true;
