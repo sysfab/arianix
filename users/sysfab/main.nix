@@ -67,9 +67,9 @@ in
                 wallpaper = [
                     "HDMI-A-1, ./hyprpaper/wallpaper.jpg"
                     "DVI-D-1, ./hyprpaper/wallpaper.jpg"
-                ]
+                ];
             };
-        }
+        };
 
         home.file.".config/waybar/config".source = ./waybar/config;
         home.file.".config/waybar/style.css".source = ./waybar/style.css;
