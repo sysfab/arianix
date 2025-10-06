@@ -57,7 +57,7 @@ in
                 prompt = "Search";
                 term = "kitty";
             };
-        }
+        };
 
         wayland.windowManager.hyprland = {
             enable = true;
