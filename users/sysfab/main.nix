@@ -138,6 +138,7 @@ in
                 enable = true;
                 defaultApplications = {
                     "inode/directory" = [ "org.gnome.Nautilus.desktop" ];
+                    "default-web-browser" = [ "google-chrome.desktop" ]
                 };
             };
 
