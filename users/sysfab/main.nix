@@ -3,6 +3,7 @@
 let
     bashrc = builtins.readFile ./.bashrc;
 
+    wofi_css = builtins.readFile ./wofi/style.css;
     swaync_css = builtins.readFile ./swaync/style.css;
 in
 {
@@ -24,7 +25,6 @@ in
 
         home.packages = with pkgs; [
             xwayland
-            wofi
             kitty
             nautilus
 
@@ -46,6 +46,18 @@ in
             enable = true;
             systemd.enable = false;
         };
+
+        programs.wofi = {
+            enable = true;
+
+            style = wofi_css;
+            config = {
+                mode = "drun";
+                insensitive = true;
+                prompt = "Search";
+                term = "kitty";
+            };
+        }
 
         wayland.windowManager.hyprland = {
             enable = true;
