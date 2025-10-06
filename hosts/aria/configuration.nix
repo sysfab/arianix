@@ -17,7 +17,7 @@
         initrd.verbose = false;
     };
 
-    environment.etc."issue".text = "Welcome to Aria!";
+    environment.etc."issue".text = "";
     services.getty.helpLine = "";
     environment.etc."motd".text = "";
     
