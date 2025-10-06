@@ -34,7 +34,7 @@
 
             specialArgs = {
                 inherit nixpkgs;
-                inherit nixcord
+                inherit nixcord;
             };
         };
     };
