@@ -1,7 +1,13 @@
 { config, pkgs, lib, ... }:
 
 {
-    boot.loader.systemd-boot.enable = true;
+    boot = {
+        loader = {
+            systemd-boot.enable = true;
+        };
+
+        kernelParams = [ "quiet" "loglevel=3" "systemd.show_status=false" ];
+    };
 
     fileSystems."/" = {
         device = "/dev/nvme0n1p2";
