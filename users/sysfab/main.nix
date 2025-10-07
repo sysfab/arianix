@@ -60,6 +60,7 @@ in
             google-chrome
             vscode
             prismlauncher
+            heroic
         ];
 
         programs.bash = {
