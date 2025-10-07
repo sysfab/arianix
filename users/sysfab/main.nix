@@ -61,6 +61,7 @@ in
             vscode
             prismlauncher
             heroic
+            lmstudio
         ];
 
         programs.bash = {
