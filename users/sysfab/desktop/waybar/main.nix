@@ -7,7 +7,7 @@ in
     programs.waybar = {
         enable = true;
 
-        settings.text = import ./config/config.nix;
+        settings.text = import ./config/main.nix;
         style = style;
 
         systemd.enable = false;
