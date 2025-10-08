@@ -21,6 +21,8 @@ in
     programs.steam.enable = true;
 
     home-manager.users.sysfab = { pkgs, ... }: {
+        nixpkgs.config.allowUnfree = true;
+
         home.pointerCursor = {
             enable = true;
             package = pkgs.vimix-cursors;
