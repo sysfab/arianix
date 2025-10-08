@@ -15,7 +15,7 @@
     };
 
     outputs = inputs @ { self, ... }: {
-        nixosConfigurations.aria = nixpkgs.lib.nixosSystem {
+        nixosConfigurations.aria = inputs.nixpkgs.lib.nixosSystem {
             system = "x86_64-linux";
 
             specialArgs = { inherit inputs; };
