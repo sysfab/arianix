@@ -24,6 +24,8 @@
         noto-fonts-cjk-serif
         noto-fonts-emoji
 
+        uv
+
         google-chrome
         vscode
         prismlauncher
