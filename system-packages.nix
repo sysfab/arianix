@@ -7,6 +7,7 @@
         wget
         curl
         git
+        htop
     ];
 
     programs.bash.enable = true;
