@@ -1,8 +1,8 @@
 { ... }:
 
 let
-    settings = builtins.readFile .config/config;
-    style = builtins.readFile .config/style.css;
+    settings = builtins.readFile ./config/config;
+    style = builtins.readFile ./config/style.css;
 in
 {
     programs.waybar = {
