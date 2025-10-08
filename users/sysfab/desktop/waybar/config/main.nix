@@ -1,4 +1,4 @@
-{}:
+{ ... }:
 
 {
     layer = "top";
@@ -52,7 +52,7 @@
         exec = "swaync-client -swb";
         on-click = "swaync-client -t -sw";
         on-click-right = "swaync-client -d";
-        
+
         escape = true;
     };
 
