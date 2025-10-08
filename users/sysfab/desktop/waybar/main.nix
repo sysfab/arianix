@@ -1,14 +1,14 @@
 { ... }:
 
 let
-    settings = ./config/config;
+    settings = builtins.readFile ./config/config;
     style = builtins.readFile ./config/style.css;
 in
 {
     programs.waybar = {
         enable = true;
 
-        settings.source = settings;
+        settings.text = settings;
         style = style;
 
         systemd.enable = false;
