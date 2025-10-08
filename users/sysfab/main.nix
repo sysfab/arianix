@@ -1,4 +1,4 @@
-{ config, nixpkgs, home-manager, ... }:
+{ config, pkgs, lib, inputs, ... }:
 
 let
     bashrc = builtins.readFile ./.bashrc;
@@ -8,8 +8,6 @@ let
     swaync_css = builtins.readFile ./desktop/swaync/style.css;
 in
 {
-    nixpkgs.config.allowUnfree = true;
-
     users.users.sysfab = {
         isNormalUser = true;
         extraGroups = [
@@ -22,9 +20,7 @@ in
     xdg.icons.enable = true;
     programs.steam.enable = true;
 
-    home-manager.users.sysfab = { pkgs, ... }: {
-        nixpkgs.config.allowUnfree = true;
-
+    inputs.home-manager.users.sysfab = { pkgs, ... }: {
         home.pointerCursor = {
             enable = true;
             package = pkgs.vimix-cursors;

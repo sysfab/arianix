@@ -1,12 +1,9 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, inputs, ... }:
 
 {
-    nixpkgs.config.allowUnfree = true;
-
     programs.nix-ld.enable = true;
 
     environment.systemPackages = with pkgs; [
-        vim
         wget
         curl
         git

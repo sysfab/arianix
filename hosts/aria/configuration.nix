@@ -1,6 +1,8 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, lib, inputs, ... }:
 
 {
+    nixpkgs.config.allowUnfree = true;
+
     boot = {
         loader = {
             systemd-boot.enable = true;

@@ -14,31 +14,28 @@
             };
     };
 
-
-    outputs = inputs@{ self, nixpkgs, home-manager, ... }: {
-        nixosConfigurations.aria = nixpkgs.lib.nixosSystem {
+    outputs = inputs @ { self, ... }: {
+        nixosConfigurations.aria = inputs.nixpkgs.lib.nixosSystem {
             system = "x86_64-linux";
 
+            specialArgs = { inherit inputs; };
+
             modules = [
-                home-manager.nixosModules.home-manager {
-                    home-manager.sharedModules = [
+                inputs.home-manager.nixosModules.home-manager {
+                    inputs.home-manager.sharedModules = [
                         inputs.nixcord.homeModules.nixcord
                     ];
                 }
 
                 ./hosts/aria/configuration.nix
+
+                ./system-packages.nix
                 ./nvidia.nix
 
                 ./environment.nix
-                
-                ./system-packages.nix
 
                 ./users/sysfab/main.nix
             ];
-
-            specialArgs = {
-                inherit nixpkgs;
-            };
         };
     };
 }
