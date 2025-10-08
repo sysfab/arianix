@@ -1,7 +1,7 @@
 { ... }:
 
 let
-    settings = builtins.readFile ./config/config;
+    settings = ./config/config;
     style = builtins.readFile ./config/style.css;
 in
 {
