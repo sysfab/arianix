@@ -15,14 +15,14 @@
     };
 
     outputs = inputs @ { self, ... }: {
-        nixosConfigurations.aria = inputs.nixpkgs.lib.nixosSystem {
+        nixosConfigurations.aria = nixpkgs.lib.nixosSystem {
             system = "x86_64-linux";
 
             specialArgs = { inherit inputs; };
 
             modules = [
-                inputs.home-manager.nixosModules.home-manager {
-                    inputs.home-manager.sharedModules = [
+                home-manager.nixosModules.home-manager {
+                    home-manager.sharedModules = [
                         inputs.nixcord.homeModules.nixcord
                     ];
                 }
