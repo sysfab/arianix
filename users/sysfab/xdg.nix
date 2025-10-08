@@ -2,8 +2,6 @@
 
 {
     xdg = {
-        icons.enable = true;
-
         mimeApps = {
             enable = true;
             defaultApplications = {
