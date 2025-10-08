@@ -20,7 +20,7 @@ in
     xdg.icons.enable = true;
     programs.steam.enable = true;
 
-    inputs.home-manager.users.sysfab = { pkgs, ... }: {
+    home-manager.users.sysfab = { pkgs, ... }: {
         home.pointerCursor = {
             enable = true;
             package = pkgs.vimix-cursors;
