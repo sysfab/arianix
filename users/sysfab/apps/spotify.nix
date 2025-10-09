@@ -9,15 +9,10 @@ in
 
         enabledExtensions = with spicePkgs.extensions; [
             adblock
-            hidePodcasts
         ];
 
         enabledCustomApps = with spicePkgs.apps; [
             marketplace
-        ];
-
-        enabledSnippets = with spicePkgs.snippets; [
-            rotatingCoverart
         ];
     };
 }
