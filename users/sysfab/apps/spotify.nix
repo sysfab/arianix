@@ -13,7 +13,7 @@ in
         ];
 
         enabledCustomApps = with spicePkgs.apps; [
-            lyrics-plus
+            lyricsPlus
         ];
 
         enabledSnippets = with spicePkgs.snippets; [
