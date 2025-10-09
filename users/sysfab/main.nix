@@ -13,5 +13,12 @@
     programs.steam.enable = true;
     xdg.icons.enable = true;
 
-    home-manager.users.sysfab = import ./home.nix { inherit config; inherit pkgs; inherit lib; inherit inputs; };
+    home-manager = {
+        useGlobalPkgs = true;
+        useUserPackages = true;
+
+        extraSpecialArgs = { inherit inputs; };
+
+        users.sysfab = import ./home.nix;
+    };
 }
