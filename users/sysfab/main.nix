@@ -14,8 +14,6 @@
     xdg.icons.enable = true;
 
     home-manager = {
-        useUserPackages = true;
-
         extraSpecialArgs = { inherit inputs; };
 
         users.sysfab = import ./home.nix;
