@@ -19,10 +19,6 @@
 
             specialArgs = { inherit inputs; };
 
-            imports = [
-                inputs.spicetify-nix.homeManagerModules.default
-            ];
-
             modules = [
                 inputs.home-manager.nixosModules.home-manager {
                     home-manager.sharedModules = [

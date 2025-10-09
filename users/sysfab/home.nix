@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ config, pkgs, lib, inputs, ... }:
 
 {
     nixpkgs.config.allowUnfree = true;
@@ -7,6 +7,8 @@
     fonts.fontconfig.enable = true;
 
     imports = [
+        inputs.spicetify-nix.homeManagerModules.default
+
         ./packages.nix
         ./bash/main.nix
 
