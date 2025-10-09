@@ -15,7 +15,7 @@
         ./xdg.nix
 
         ./apps/discord.nix
-        ./apps/spotify.nix
+        import ./apps/spotify.nix { inherit inputs; }
 
         ./desktop/hyprland/main.nix
         ./desktop/hyprpaper/main.nix
@@ -24,6 +24,4 @@
         ./desktop/swaync/main.nix
         ./cursor.nix
     ];
-
-    specialArgs = { inherit inputs; };
 }
