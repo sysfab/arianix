@@ -8,9 +8,6 @@
         curl
         git
         htop
-        wl-clipboard
-        slurp
-        grim
     ];
 
     programs.bash.enable = true;
@@ -36,7 +33,7 @@
         };
     };
 
-    security.polkit.enable=true;
+    security.polkit.enable = true;
     systemd = {
         user.services.polkit-gnome-authentication-agent-1 = {
             description = "polkit-gnome-authentication-agent-1";
