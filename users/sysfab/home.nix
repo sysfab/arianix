@@ -24,6 +24,4 @@
         ./desktop/swaync/main.nix
         ./cursor.nix
     ];
-
-    specialArgs = { inherit inputs; };
 }
