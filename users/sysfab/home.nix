@@ -15,7 +15,7 @@
         ./xdg.nix
 
         ./apps/discord.nix
-        import ./apps/spotify.nix { inherit inputs; }
+        ./apps/spotify.nix
 
         ./desktop/hyprland/main.nix
         ./desktop/hyprpaper/main.nix
