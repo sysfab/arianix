@@ -20,11 +20,7 @@
             specialArgs = { inherit inputs; };
 
             modules = [
-                inputs.home-manager.nixosModules.home-manager {
-                    home-manager.sharedModules = [
-                        inputs.nixcord.homeModules.nixcord
-                    ];
-                }
+                inputs.home-manager.nixosModules.home-manager
 
                 ./hosts/aria/configuration.nix
 
