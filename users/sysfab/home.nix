@@ -1,10 +1,6 @@
 { config, pkgs, lib, inputs, ... }:
 
 {
-    home.stateVersion = "25.05";
-
-    fonts.fontconfig.enable = true;
-
     imports = [
         inputs.spicetify-nix.homeManagerModules.default
 
@@ -23,4 +19,8 @@
         ./desktop/swaync/main.nix
         ./cursor.nix
     ];
+
+    fonts.fontconfig.enable = true;
+
+    home.stateVersion = "25.05";
 }
