@@ -20,7 +20,7 @@
             specialArgs = { inherit inputs; };
 
             modules = [
-                inputs.home-manager.nixosModules.home-manager {
+                inputs.home-manager.nixosModules.home-manager {}: {
                     home-manager.sharedModules = {
                         inputs.nixcord.homeModules.nixcord
                     };
