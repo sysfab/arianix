@@ -11,5 +11,13 @@ in
             adblock
             hidePodcasts
         ];
+
+        enabledCustomApps = with spicePkgs.apps; [
+            lyrics-plus
+        ];
+
+        enabledSnippets = with spicePkgs.snippets; [
+            rotatingCoverart
+        ];
     };
 }
