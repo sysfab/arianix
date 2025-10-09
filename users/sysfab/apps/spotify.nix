@@ -2,6 +2,15 @@
 
 let
     spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.hostPlatform.system};
+
+    spicy-lyrics = {
+        name = "spicy-lyrics";
+
+        src = pkgs.fetchFromGitHub {
+            owner = "Spikerko";
+            repo = "spicy-lyrics";
+        };
+    };
 in
 {
     programs.spicetify = {
@@ -13,10 +22,7 @@ in
         ];
 
         enabledCustomApps = with spicePkgs.apps; [
-            pkgs.fetchFromGitHub {
-                owner = "Spikerko";
-                repo = "spicy-lyrics";
-            }
+            spicy-lyrics
         ];
 
         enabledSnippets = with spicePkgs.snippets; [
