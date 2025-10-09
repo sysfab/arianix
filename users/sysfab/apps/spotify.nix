@@ -9,6 +9,7 @@ let
         src = pkgs.fetchFromGitHub {
             owner = "Spikerko";
             repo = "spicy-lyrics";
+            tag = "5.16.2";
         };
     };
 in
