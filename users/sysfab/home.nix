@@ -15,7 +15,7 @@
         ./xdg.nix
 
         ./apps/discord.nix
-        ./apps/spicetify.nix
+        ./apps/spotify.nix
 
         ./desktop/hyprland/main.nix
         ./desktop/hyprpaper/main.nix
