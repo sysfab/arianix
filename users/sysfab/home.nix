@@ -2,14 +2,15 @@
 
 {
     imports = [
-        inputs.spicetify-nix.homeManagerModules.default
-
         ./packages.nix
         ./bash/main.nix
 
         ./xdg.nix
 
+        inputs.nixcord.homeModules.nixcord
         ./apps/discord.nix
+
+        inputs.spicetify-nix.homeManagerModules.default
         ./apps/spotify.nix
 
         ./desktop/hyprland/main.nix
