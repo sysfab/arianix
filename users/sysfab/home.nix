@@ -1,6 +1,8 @@
 { config, pkgs, lib, inputs, ... }:
 
 {
+    nixpkgs.config.allowUnfree = true;
+
     imports = [
         ./packages.nix
         ./bash/main.nix
