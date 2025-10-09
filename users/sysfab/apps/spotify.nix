@@ -13,7 +13,10 @@ in
         ];
 
         enabledCustomApps = with spicePkgs.apps; [
-            lyricsPlus
+            pkgs.fetchFromGitHub {
+                owner = "Spikerko";
+                repo = "spicy-lyrics";
+            }
         ];
 
         enabledSnippets = with spicePkgs.snippets; [
