@@ -8,6 +8,9 @@
         curl
         git
         htop
+        wl-clipboard
+        slurp
+        grim
     ];
 
     programs.bash.enable = true;
