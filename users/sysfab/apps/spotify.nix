@@ -21,10 +21,11 @@ in
         enabledExtensions = with spicePkgs.extensions; [
             adblock
             hidePodcasts
+            spicy-lyrics
         ];
 
         enabledCustomApps = with spicePkgs.apps; [
-            spicy-lyrics
+            
         ];
 
         enabledSnippets = with spicePkgs.snippets; [
