@@ -9,9 +9,8 @@
                     inputs.nixpkgs.follows = "nixpkgs";
             };
 
-            nixcord = {
-                url = "github:kaylorben/nixcord";
-            };
+            nixcord.url = "github:kaylorben/nixcord";
+            spicetify-nix.url = "github:Gerg-L/spicetify-nix";
     };
 
     outputs = inputs @ { self, ... }: {
