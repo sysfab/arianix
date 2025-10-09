@@ -4,8 +4,6 @@
     programs.nixcord = {
         enable = true;
 
-        package = pkgs.nixcord;
-
         config = {
             plugins = {
                 fakeNitro.enable = true;

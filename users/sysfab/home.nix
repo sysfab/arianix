@@ -7,7 +7,6 @@
 
         ./xdg.nix
 
-        inputs.nixcord.homeModules.nixcord
         ./apps/discord.nix
 
         inputs.spicetify-nix.homeManagerModules.default
