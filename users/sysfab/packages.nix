@@ -31,5 +31,6 @@
         prismlauncher
         heroic
         lmstudio
+        spotify
     ];
 }
