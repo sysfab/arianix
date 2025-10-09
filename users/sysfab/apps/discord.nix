@@ -6,8 +6,6 @@
 
         package = pkgs.nixcord;
 
-        flags = [ "--enable-features=WebRTCPipeWireCapturer" ];
-
         config = {
             plugins = {
                 fakeNitro.enable = true;
