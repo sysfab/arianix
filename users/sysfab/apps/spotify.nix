@@ -18,7 +18,7 @@ in
             hidePodcasts
 
             {
-                name = "spicy-lyrics";
+                name = "app.tsx";
 
                 src = (pkgs.fetchFromGitHub {
                     owner = "Spikerko";
