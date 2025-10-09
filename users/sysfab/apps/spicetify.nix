@@ -6,5 +6,5 @@ in
 {
     programs.spicetify = {
         enable = true;
-    }
+    };
 }
