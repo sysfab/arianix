@@ -13,15 +13,15 @@
             spicetify-nix.url = "github:Gerg-L/spicetify-nix";
     };
 
-    imports = [
-        inputs.spicetify-nix.homeManagerModules.default
-    ];
-
     outputs = inputs @ { self, ... }: {
         nixosConfigurations.aria = inputs.nixpkgs.lib.nixosSystem {
             system = "x86_64-linux";
 
             specialArgs = { inherit inputs; };
+
+            imports = [
+                inputs.spicetify-nix.homeManagerModules.default
+            ];
 
             modules = [
                 inputs.home-manager.nixosModules.home-manager {
