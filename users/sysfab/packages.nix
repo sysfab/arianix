@@ -26,6 +26,7 @@
         noto-fonts-emoji
 
         uv
+        pv
 
         google-chrome
         vscode
