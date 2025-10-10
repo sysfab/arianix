@@ -5,15 +5,28 @@
 
     boot = {
         loader = {
-            systemd-boot.enable = true;
+            grub = {
+                enable = true;
+                efiSupport = true;        # enables EFI GRUB
+                device = "nodev";         # required for EFI systems
+            };
         };
 
         kernelParams = [
-            "quiet" 
+            "quiet"
             "loglevel=3"
-            "systemd.show_status=false" 
+            "systemd.show_status=false"
         ];
-    
+
+        extraEntries = ''
+            menuentry "Windows (Legacy BIOS on /dev/sda2)" {
+                insmod part_msdos
+                insmod ntfs
+                set root='(hd0,msdos2)'
+                chainloader +1
+            }
+        '';
+
         initrd.verbose = false;
     };
 
