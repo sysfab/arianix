@@ -9,17 +9,16 @@
                 enable = true;
                 efiSupport = true;        # enables EFI GRUB
                 device = "nodev";         # required for EFI systems
+            
+                extraEntries = ''
+                    menuentry "Windows (Legacy BIOS on /dev/sda2)" {
+                        insmod part_msdos
+                        insmod ntfs
+                        set root='(hd0,msdos2)'
+                        chainloader +1
+                    }
+                '';
             };
-
-            extraEntries = ''
-                menuentry "Windows (Legacy BIOS on /dev/sda2)" {
-                    insmod part_msdos
-                    insmod ntfs
-                    set root='(hd0,msdos2)'
-                    chainloader +1
-                }
-            '';
-
         };
 
         kernelParams = [
