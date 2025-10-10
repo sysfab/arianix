@@ -33,5 +33,6 @@
         heroic
         lmstudio
         coppwr
+        ventoy-full-gtk
     ];
 }
