@@ -2,6 +2,7 @@
 
 {
     nixpkgs.config.allowUnfree = true;
+    nixpkgs.config.permittedInsecurePackages = false;
 
     imports = [
         ./packages.nix
