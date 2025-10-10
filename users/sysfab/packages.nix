@@ -7,6 +7,7 @@
         gvfs
         nautilus
         hyprshot
+        pavucontrol
 
         cmatrix
         fastfetch
