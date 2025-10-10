@@ -35,4 +35,6 @@
         coppwr
         ventoy-full-gtk
     ];
+
+    nixpkgs.config.permittedInsecurePackages = [ pkgs.ventoy-full-gtk ];
 }
