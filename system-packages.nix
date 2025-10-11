@@ -5,6 +5,13 @@
     
     programs.nix-ld.enable = true;
 
+    services.zerotierone = {
+        enable = true;
+        joinNetworks = [
+            "93afae5963737628"
+        ];
+    };
+
     environment.systemPackages = with pkgs; [
         wget
         curl
