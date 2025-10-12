@@ -25,8 +25,6 @@
         noto-fonts-cjk-serif
         noto-fonts-emoji
 
-        protoncfg
-
         uv
         pv
 
