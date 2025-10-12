@@ -25,6 +25,9 @@
         noto-fonts-cjk-serif
         noto-fonts-emoji
 
+        winecfg
+        protoncfg
+
         uv
         pv
 
