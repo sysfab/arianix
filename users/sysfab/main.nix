@@ -11,10 +11,10 @@
     };
 
     programs.steam = {
-        enable = true
+        enable = true;
 
-        protontricks.enable = true
-    }
+        protontricks.enable = true;
+    };
 
     xdg.icons.enable = true;
 
