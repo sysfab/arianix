@@ -25,7 +25,7 @@
         noto-fonts-cjk-serif
         noto-fonts-emoji
 
-        protonhax
+        protontricks
 
         uv
         pv
