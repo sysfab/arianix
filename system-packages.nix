@@ -23,6 +23,7 @@
         curl
         git
         htop
+        python
     ];
 
     programs.bash.enable = true;
