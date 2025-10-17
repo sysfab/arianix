@@ -15,7 +15,7 @@
                 exec ${pkgs.python3}/bin/python "$@"
             '')
         ];
-    }
+    };
 
     services.zerotierone = {
         enable = true;
