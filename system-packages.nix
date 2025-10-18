@@ -11,6 +11,8 @@
         ];
     };
 
+    hardware.opentabletdriver.enable = true;
+
     services.zerotierone = {
         enable = true;
         joinNetworks = [
