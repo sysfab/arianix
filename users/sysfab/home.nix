@@ -23,6 +23,11 @@
         ./cursor.nix
     ];
 
+    services.openTabletDriver = {
+        enable = true;
+        daemon.enable = true;
+    };
+
     fonts.fontconfig.enable = true;
 
     home.stateVersion = "25.05";

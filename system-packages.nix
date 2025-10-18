@@ -18,11 +18,6 @@
         ];
     };
 
-    services.openTabletDriver = {
-        enable = true;
-        daemon.enable = true;
-    };
-
     environment.systemPackages = with pkgs; [
         wget
         curl
