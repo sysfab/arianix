@@ -14,7 +14,7 @@
     hardware.opentabletdriver = {
         enable = true;
         daemon.enable = true;
-    }
+    };
 
     services.zerotierone = {
         enable = true;
