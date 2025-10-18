@@ -35,6 +35,7 @@
         lmstudio
         coppwr
         ventoy-full-gtk
+        krita
     ];
 
     nixpkgs.config.permittedInsecurePackages = [ "ventoy-gtk3-1.1.07" ];
