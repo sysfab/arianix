@@ -37,6 +37,7 @@
         ventoy-full-gtk
         krita
         obsidian
+        love
     ];
 
     nixpkgs.config.permittedInsecurePackages = [ "ventoy-gtk3-1.1.07" ];
