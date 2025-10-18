@@ -29,6 +29,7 @@
         git
         htop
         python3
+        zip
     ];
 
     programs.bash.enable = true;
