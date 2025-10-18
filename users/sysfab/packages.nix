@@ -9,8 +9,6 @@
         hyprshot
         pavucontrol
 
-        opentabletdriver
-
         cmatrix
         fastfetch
 
