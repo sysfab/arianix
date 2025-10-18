@@ -36,6 +36,7 @@
         coppwr
         ventoy-full-gtk
         krita
+        obsidian
     ];
 
     nixpkgs.config.permittedInsecurePackages = [ "ventoy-gtk3-1.1.07" ];
