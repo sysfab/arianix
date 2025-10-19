@@ -38,7 +38,7 @@
         krita
         obsidian
         love
-        osu-lazer
+        osu-lazer-bin
     ];
 
     nixpkgs.config.permittedInsecurePackages = [ "ventoy-gtk3-1.1.07" ];
