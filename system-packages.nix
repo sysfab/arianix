@@ -31,6 +31,7 @@
         python3
         zip
         ntfs3g
+        pulseaudio
     ];
 
     programs.bash.enable = true;
