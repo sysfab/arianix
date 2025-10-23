@@ -39,6 +39,8 @@
         obsidian
         love
         osu-lazer-bin
+
+        vencord
     ];
 
     nixpkgs.config.permittedInsecurePackages = [ "ventoy-gtk3-1.1.07" ];
