@@ -30,6 +30,7 @@
         htop
         python3
         zip
+        ntfs-3g
     ];
 
     programs.bash.enable = true;
