@@ -11,18 +11,5 @@
                 "text/html" = [ "google-chrome.desktop" ];
             };
         };
-
-        portal = {
-            enable = true;
-            extraPortals = [ 
-                pkgs.xdg-desktop-portal-hyprland
-            ];
-
-            config = {
-                hyprland = {
-                    default = [ "hyprland" ];
-                };
-            };
-        };
     };
 }
