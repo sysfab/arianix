@@ -39,7 +39,7 @@
         obsidian
         love
         osu-lazer-bin
-        gale
+        flatpak
 
         vesktop
     ];
