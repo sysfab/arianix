@@ -39,6 +39,7 @@
         obsidian
         love
         osu-lazer-bin
+        r2modman
 
         vesktop
     ];
