@@ -45,7 +45,6 @@
         qemu = {
             package = pkgs.qemu;
             swtpm.enable = true;
-            virtiofsd = "${pkgs.virtiofsd}/bin/virtiofsd";
         };
     };
     users.groups.libvirtd.members = ["sysfab"];
@@ -60,6 +59,7 @@
         zip
         ntfs3g
         pulseaudio
+        virtiofsd
     ];
 
     programs.bash.enable = true;
