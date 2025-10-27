@@ -46,8 +46,8 @@
             package = pkgs.qemu;
             swtpm.enable = true;
             virtiofsd = "${pkgs.virtiofsd}/bin/virtiofsd";
-        }
-    }
+        };
+    };
     users.groups.libvirtd.members = ["sysfab"];
     virtualisation.spiceUSBRedirection.enable = true;
 
