@@ -39,6 +39,11 @@
 
     services.flatpak.enable = true;
 
+    programs.virt-manager.enable = true;
+    virtualisation.libvirtd.enable = true;
+    users.groups.libvirtd.members = ["sysfab"];
+    virtualisation.spiceUSBRedirection.enable = true;
+
     environment.systemPackages = with pkgs; [
         wget
         curl
