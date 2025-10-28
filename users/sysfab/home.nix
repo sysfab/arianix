@@ -25,8 +25,6 @@
 
     services.pulseeffects.enable = true;
 
-    programs.dconf.enable = true;
-
     fonts.fontconfig.enable = true;
 
     home.stateVersion = "25.05";
