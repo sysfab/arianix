@@ -23,7 +23,7 @@
         ./cursor.nix
     ];
 
-    services.pulseeffects.enable = true;
+    #services.pulseeffects.enable = true;
 
     fonts.fontconfig.enable = true;
 
