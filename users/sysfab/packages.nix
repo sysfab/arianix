@@ -9,9 +9,6 @@
         hyprshot
         pavucontrol
 
-        cmatrix
-        fastfetch
-
         adw-gtk3
 
         adwaita-icon-theme
@@ -26,7 +23,6 @@
         noto-fonts-color-emoji
 
         uv
-        pv
 
         google-chrome
         vscode
@@ -34,7 +30,7 @@
         heroic
         lmstudio
         coppwr
-        ventoy-full-gtk
+        #ventoy-full-gtk
         krita
         obsidian
         love
