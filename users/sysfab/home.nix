@@ -4,16 +4,19 @@
     nixpkgs.config.allowUnfree = true;
 
     imports = [
-        ./packages.nix
         ./bash/main.nix
 
         ./xdg.nix
 
+        ./packages.nix
+
+        ./packages/aria/rebuild/main.nix
+
         inputs.nixcord.homeModules.nixcord
-        ./apps/discord.nix
+        ./packages/discord.nix
 
         inputs.spicetify-nix.homeManagerModules.default
-        ./apps/spotify.nix
+        ./packages/spotify.nix
 
         ./desktop/hyprland/main.nix
         ./desktop/hyprpaper/main.nix

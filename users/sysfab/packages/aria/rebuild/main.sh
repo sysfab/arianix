@@ -1,0 +1,1 @@
+aria-commit -m "update: rebuild"; sudo nixos-rebuild switch --flake ~/arianix/
