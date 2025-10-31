@@ -4,10 +4,11 @@ set -e
 
 pushd ~/arianix/
 
-git diff -U0 '*.nix'
-
 git add .
-current=$(nixos-rebuild list-generations | grep current)
+
+current=$(nixos-rebuild list-generations --json \
+  | jq '.[] | select(.current) .generation')
+
 git commit -m "$current"
 
 echo "NixOS Rebuilding..."

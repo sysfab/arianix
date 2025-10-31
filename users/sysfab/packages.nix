@@ -23,6 +23,8 @@
         noto-fonts-color-emoji
 
         uv
+        
+        jq
 
         google-chrome
         vscode

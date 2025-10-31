@@ -24,7 +24,8 @@
 
                 ./hosts/aria/configuration.nix
 
-                ./system-packages.nix
+                ./packages.nix
+                ./services.nix
                 ./nvidia.nix
 
                 ./environment.nix
