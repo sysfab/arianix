@@ -20,6 +20,8 @@
         inputs.spicetify-nix.homeManagerModules.default
         ./packages/spotify.nix
 
+        ./fonts.nix
+
         ./desktop/hyprland/main.nix
         ./desktop/hyprpaper/main.nix
         ./desktop/wofi/main.nix
@@ -29,8 +31,6 @@
     ];
 
     #services.pulseeffects.enable = true;
-
-    fonts.fontconfig.enable = true;
 
     home.stateVersion = "25.05";
 }
