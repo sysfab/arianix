@@ -5,5 +5,5 @@ let
 in {
     home.packages = [
         pkgs.writeShellScriptBin "aria-rebuild" scriptContent
-    ]
+    ];
 }
