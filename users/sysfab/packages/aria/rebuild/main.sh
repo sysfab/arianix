@@ -6,8 +6,7 @@ pushd ~/arianix/
 
 git add .
 
-current=$(nixos-rebuild list-generations --json \
-  | jq '.[] | select(.current) .generation')
+current=$(nixos-rebuild list-generations --json   | jq -r '.[] | select(.current) | "Build generation #\(.generation)"')
 
 git commit -m "$current"
 
