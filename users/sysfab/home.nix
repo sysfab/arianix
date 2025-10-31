@@ -11,6 +11,8 @@
         ./packages.nix
 
         ./packages/aria/rebuild/main.nix
+        ./packages/aria/clear-garbage/main.nix
+        ./packages/aria/clear-full/main.nix
 
         inputs.nixcord.homeModules.nixcord
         ./packages/discord.nix
