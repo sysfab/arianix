@@ -2,7 +2,8 @@
 
 let
     scriptContent = builtins.readFile ./main.sh;
-in
+in {
     home.packages = [
         pkgs.writeShellScriptBin "aria-rebuild" scriptContent
     ]
+}
